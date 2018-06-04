@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Lunchconf Client",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3333",
+            "webRoot": "${workspaceFolder}/public"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Lunchconf Server",
+            "processId": "${command:PickProcess}",
+            "restart": true,
+            "protocol": "inspector",
+        },
+    ]
+}
