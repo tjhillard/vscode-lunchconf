@@ -8,6 +8,7 @@ const app = new Vue({
     },
 
     methods: {
+
         addTodo() {
 
             if (!this.newTodo) return alert('New todo cannot be blank!');
@@ -21,6 +22,6 @@ const app = new Vue({
             this.newTodo = '';
 
         }
-    }
 
+    }
 });

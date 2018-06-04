@@ -14,16 +14,17 @@ app.listen(port || process.env.PORT, () => console.log(`Server running on ${ por
 // Routes
 app.get('/', (req, res) => res.send('Hello World!'));
 
-app.get('/api/sports', (req, res) => {
+const sports = [
+    'baseball',
+    'baseketball',
+    'curling',
+    'volleyball',
+    'softball',
+    'football'
+];
 
-    const sports = [
-        'baseball',
-        'baseketball',
-        'curling',
-        'volleyball',
-        'softball',
-        'football'
-    ];
+// 1. BREAKPOINTS
+app.get('/api/sports', (req, res) => {
 
     // sports.push('potato');
 
@@ -40,3 +41,27 @@ app.get('/api/sports', (req, res) => {
     });
 
 });
+
+// 2. Debug Console
+app.get('/api/users', (req, res) => {
+    let users = [
+        { id: 1, name: 'Jonathan Dough' },
+        { id: 2, name: 'Ddave Coulier' },
+        { id: 3, name: 'Cardi B' }
+    ];
+
+    console.log(users);
+
+    return res.json(users);
+});
+
+app.listen();
+
+
+
+
+// 3. IntelliSense
+// ctrl + space
+// peek def
+// go to def
+// app.listen()
