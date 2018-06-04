@@ -9,24 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 </head>
 <body>
-    <h1 class="title">Lunchconf Demo App</h1>
-
-    <div id="app">
-
-        <h3>Add New Todo!</h3>
-        <input type="text" class="input" placeholder="Go to the store, Feed cat, Uninstall Atom..." v-model="newTodo" @keyup.enter="addTodo()">
-
-        <ul style="margin-top: 15px;" class="list">
-            <li v-for="(todo, index) in todos"
-                :key="index">
-                <div class="box">
-                    <span>{{ todo.message }}</span> | <small>Added on {{ todo.created_on }}</small>
-                </div>
-                
-            </li>
-        </ul>
-
+    <div class="container">
+        <h1 class="title">Lunchconf Demo App</h1>
+        <div id="app">
+            <h3>Add New Todo!</h3>
+            <input type="text" class="input" placeholder="Go to the store, Feed cat, Uninstall Atom..." v-model="newTodo" @keyup.enter="addTodo()">
+    
+            <ul style="margin-top: 15px;" class="list">
+                <li v-for="(todo, index) in todos" :key="index">
+                    <div class="box">
+                        <span>{{ todo.message }}</span> | <small>Added on {{ todo.created_on }}</small>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
+    
     
 
     <!-- cdn -->
